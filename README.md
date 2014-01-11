@@ -1,22 +1,31 @@
- Description : XML SAX parser
-
+XML SAX parser
+=============================
 
  API
-====
+----
 
+```
  Function: file(Filename, Options) -> Result
+
  Function: stream(Stream, Options) -> Result
+
  Input:    Filename = string()
+
            Stream = binary()
+
            Options = [{OptTag, EventFun()}]
+
            OptTag = event_fun
+
            EventFun(Event) -> Result1
                         This function is called for every event sent by the parser. 
 
  Output:   Result = {endChunk, rest, Rest()} | ok
+
            Rest() = binary()                            
+```
 
-
+```
            Event =
                              startDocument            
                                               Receive notification of the beginning of a document. 
@@ -53,7 +62,7 @@
                             {cdata, Cdata}
                                     Cdata = binary()
                                              Report an XML CDATA anywhere in the document.
-
+```
 
   Example
 ---------
