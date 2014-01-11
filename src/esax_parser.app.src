@@ -1,0 +1,13 @@
+{application, esax_parser,
+ [
+  {description, "sax parser"},
+  {vsn, "0.1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  lager
+                 ]},
+  {mod, {esax_parser_app, []}},
+  {env, []}
+ ]}.
